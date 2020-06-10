@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import tw from 'tailwind.macro';
 
 interface IProps {
-  children: JSX.Element;
+  children: JSX.Element | JSX.Element[];
 }
 
 const WidthContent = styled.div`

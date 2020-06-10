@@ -1,20 +1,24 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { Link as GatsbyLink } from 'gatsby';
-import styled from 'styled-components';
+import styled, { SimpleInterpolation } from 'styled-components';
 import tw from 'tailwind.macro';
 
 interface IProps {
   page: string;
-  content: string;
+  content: ReactNode;
+  customstyle?: SimpleInterpolation;
 }
 
 const StyledLink = styled((props) => <GatsbyLink {...props} />)`
   ${tw`font-roboto text-black pr-2`};
   text-decoration: none;
+  ${(props) => props.customstyle};
 `;
 
-const Link = ({ page, content }: IProps): JSX.Element => (
-  <StyledLink to={page}>{content}</StyledLink>
+const Link = ({ page, content, customstyle }: IProps): JSX.Element => (
+  <StyledLink to={page} customstyle={customstyle}>
+    {content}
+  </StyledLink>
 );
 
 export default Link;

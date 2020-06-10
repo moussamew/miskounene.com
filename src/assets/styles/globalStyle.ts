@@ -7,12 +7,6 @@ const GlobalStyle = createGlobalStyle`
     scroll-behavior: smooth;
   }
 
-  html,
-  body {
-    height: 100%;
-    width: 100%;
-  }
-
   body {
     font-size: 1.6rem;
     padding: 0 4rem;

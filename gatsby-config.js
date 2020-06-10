@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    description: `Hello, moi c'est Moussa. Je suis un développeur web et mobile utilisant principalement React et React-Native avec du TypeScript.`,
+    description: `Je suis Moussa Iskounene, développeur d'applications web & mobile sur les technologies React et React Native.`,
     author: 'Moussa',
   },
   plugins: [
@@ -12,19 +12,18 @@ module.exports = {
         path: `${__dirname}/src/assets/images`,
       },
     },
-
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'Book de Moussa Iskounene',
+        short_name: 'miskounene.com',
         start_url: '/',
         background_color: '#663399',
         theme_color: '#663399',
         display: 'minimal-ui',
-        icon: 'src/assets/images/gatsby-icon.png', // This path is relative to the root of the site.
+        icon: 'src/assets/images/favicon.png', // This path is relative to the root of the site.
       },
     },
     'gatsby-plugin-typescript',

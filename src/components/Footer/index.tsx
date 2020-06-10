@@ -1,11 +1,7 @@
 import React from 'react';
 
 function Footer(): JSX.Element {
-  return (
-    <header>
-      <div>coucou</div>
-    </header>
-  );
+  return <header></header>;
 }
 
 export default Footer;

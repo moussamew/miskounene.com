@@ -13,15 +13,15 @@ View the full documentation at https://tailwindcss.com.
 
 const colors = {
   body: '#fcfcfe',
-
-  purple: '#7e82bd',
-  purpleLight: '#7e82bdcf',
-  purpleDark: '#666a9c',
+  title: '#4a4b55',
+  purple: '#ab89dd',
+  pink: '#E051A3',
 
   green: '#2ecc71',
 
   white: '#FFFFFF',
-  black: '#000000',
+  black: '#4a4b55',
+  blackDark: '#2B2C31',
 };
 
 const sizes = {

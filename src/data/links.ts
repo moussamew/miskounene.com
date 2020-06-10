@@ -22,8 +22,8 @@ const headerLinks: ILink[] = [
   },
   {
     id: 3,
-    title: `Parcours`,
-    page: '/story',
+    title: `CV`,
+    page: '/cv',
   },
 ];
 
