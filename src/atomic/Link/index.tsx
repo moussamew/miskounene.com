@@ -10,7 +10,7 @@ interface IProps {
 }
 
 const StyledLink = styled((props) => <GatsbyLink {...props} />)`
-  ${tw`font-roboto text-black pr-2`};
+  ${tw`font-roboto text-blackDark pr-2`};
   text-decoration: none;
   ${(props) => props.customstyle};
 `;

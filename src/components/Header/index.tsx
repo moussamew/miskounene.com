@@ -6,7 +6,7 @@ import { headerLinks } from '../../data/links';
 import Wrapper from '../../atomic/Wrapper';
 import { H2 } from '../../atomic/Heading';
 import Logo from '../../assets/images/logo.svg';
-import Button from '../../atomic/Button';
+import Contact from './Contact';
 
 const Container = styled.header`
   ${tw`flex justify-between`};
@@ -22,32 +22,23 @@ const ImageStyle = css`
 `;
 
 const NavLinks = styled.div`
-  ${tw`flex`}
+  ${tw`flex relative`}
 `;
 
-function Header(): JSX.Element {
-  const contactWithMail = () =>
-    (location.href = 'mailto:moussa@miskounene.com');
-
-  return (
-    <Wrapper>
-      <Container>
-        <Link
-          page="/"
-          content={<Image src={Logo} />}
-          customstyle={ImageStyle}
-        />
-        <NavLinks>
-          {headerLinks.map((link) => (
-            <H2 key={link.id}>
-              <Link page={link.page} content={link.title} />
-            </H2>
-          ))}
-          <Button action={contactWithMail} content="Prendre contact" />
-        </NavLinks>
-      </Container>
-    </Wrapper>
-  );
-}
+const Header = (): JSX.Element => (
+  <Wrapper>
+    <Container>
+      <Link page="/" content={<Image src={Logo} />} customstyle={ImageStyle} />
+      <NavLinks>
+        {headerLinks.map((link) => (
+          <H2 key={link.id}>
+            <Link page={link.page} content={link.title} />
+          </H2>
+        ))}
+        <Contact />
+      </NavLinks>
+    </Container>
+  </Wrapper>
+);
 
 export default Header;

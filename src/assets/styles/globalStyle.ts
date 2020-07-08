@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+const { colors } = require('../../../tailwind');
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -15,9 +16,15 @@ const GlobalStyle = createGlobalStyle`
   p, label, a, span {
     line-height: 1.5em;
     margin: unset;
+    font-family: "Open Sans";
     @media (min-width: 768px) {
       font-size: 1.8rem;
     }
+  }
+
+  strong {
+    color: ${colors.blue};
+    font-weight: normal;
   }
   
   button {

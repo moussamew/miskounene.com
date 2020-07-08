@@ -25,6 +25,11 @@ const headerLinks: ILink[] = [
     title: `CV`,
     page: '/cv',
   },
+  {
+    id: 4,
+    title: `API Status`,
+    page: '/api',
+  },
 ];
 
 export { headerLinks };

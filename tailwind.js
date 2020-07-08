@@ -14,7 +14,10 @@ View the full documentation at https://tailwindcss.com.
 const colors = {
   body: '#fcfcfe',
   title: '#4a4b55',
-  purple: '#ab89dd',
+  purple: '#AB89DD',
+  purpleDark: '#775F9A',
+  blue: '#5EB2F3',
+  blueDark: '#1976D2',
   pink: '#E051A3',
 
   green: '#2ecc71',
@@ -159,6 +162,8 @@ module.exports = {
 
   width: {
     ...sizes,
+    '1/3': '30%',
+    '1/2': '50%',
     full: '100%',
     screen: '100vw',
   },
