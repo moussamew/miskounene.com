@@ -6,10 +6,9 @@ import { headerLinks } from '../../data/links';
 import Wrapper from '../../atomic/Wrapper';
 import { H2, H1 } from '../../atomic/Heading';
 import Button from '../../atomic/Button';
-import Logo from '../../assets/images/favicon.png';
 import Mail from '../../assets/images/mail.svg';
 
-const Container = styled.header`
+const Container = styled.nav`
   ${tw`flex justify-between`};
   margin-top: 80px;
 `;
@@ -18,9 +17,15 @@ const Flex = styled.div`
   ${tw`flex`}
 `;
 
-const Image = styled.img`
-  ${tw`h-4 m-auto mr-1`}
-  margin-top: 1rem;
+const Emoji = styled.div`
+  ${tw`m-auto`};
+  margin-bottom: 1.8rem;
+
+  span {
+    margin: auto;
+    font-size: 4rem;
+    padding-right: 1rem;
+  }
 `;
 
 const NavLinks = styled.div`
@@ -36,25 +41,27 @@ function contact() {
   // TODO: Redirect to the page /contact
 }
 
-const Header = (): JSX.Element => {
-  return (
-    <Wrapper>
-      <Container>
-        <Flex>
-          <Image src={Logo} />
-          <H1>Moussa Iskounene</H1>
-        </Flex>
-        <NavLinks>
-          {headerLinks.map((link) => (
-            <H2 key={link.title}>
-              <Link page={link.page} content={link.title} />
-            </H2>
-          ))}
-          <Button action={contact} icon={Mail} />
-        </NavLinks>
-      </Container>
-    </Wrapper>
-  );
-};
+const Header = (): JSX.Element => (
+  <Wrapper>
+    <Container>
+      <Flex>
+        <Emoji>
+          <span role="img" aria-label="popcorn">
+            🍿
+          </span>
+        </Emoji>
+        <H1>Moussa Iskounene</H1>
+      </Flex>
+      <NavLinks>
+        {headerLinks.map((link) => (
+          <H2 key={link.title}>
+            <Link page={link.page} content={link.title} />
+          </H2>
+        ))}
+        <Button action={contact} icon={Mail} />
+      </NavLinks>
+    </Container>
+  </Wrapper>
+);
 
 export default Header;

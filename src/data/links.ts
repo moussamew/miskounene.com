@@ -5,16 +5,16 @@ interface ILink {
 
 const headerLinks: ILink[] = [
   {
-    title: 'Projets',
-    page: '/projects',
-  },
-  {
     title: 'Articles',
     page: '/blog',
   },
   {
-    title: `Parcours`,
+    title: 'Parcours',
     page: '/cv',
+  },
+  {
+    title: 'Clients',
+    page: '/clients',
   },
 ];
 
