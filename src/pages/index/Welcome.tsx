@@ -19,7 +19,7 @@ const ImageWrapper = styled.div`
   display: flex;
 
   .gatsby-image-wrapper {
-    width: 300px;
+    width: 275px;
   }
 `;
 
@@ -27,7 +27,7 @@ const query = graphql`
   query {
     placeholderImage: file(relativePath: { eq: "moussa.png" }) {
       childImageSharp {
-        fluid(maxWidth: 300) {
+        fluid(maxWidth: 275) {
           ...GatsbyImageSharpFluid
         }
       }

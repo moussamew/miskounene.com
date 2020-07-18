@@ -25,6 +25,8 @@ const colors = {
   white: '#FFFFFF',
   black: '#353535',
   blackDark: '#2B2C31',
+  grey: '#7E848F',
+  greyLight: '#E1ECFF',
 };
 
 const sizes = {

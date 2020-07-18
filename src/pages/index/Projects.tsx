@@ -5,29 +5,42 @@ import tw from 'tailwind.macro';
 import { H1 } from '../../atomic/Heading';
 import { IRepository } from '../../types/node';
 
+const { colors } = require('../../../tailwind');
+
 const Section = styled.section`
   ${tw`flex flex-col`};
 `;
 
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: 50px 20% auto;
+`;
+
 const Row = styled.a`
-  ${tw`py-1 cursor-pointer flex`}
-  border-bottom: 1px solid rgb(236, 236, 236);
-  &:hover {
-    background: rgb(236, 236, 236);
+  ${tw`py-1 cursor-pointer`}
+  display: contents;
+
+  &:hover span {
+    background: ${colors.greyLight};
   }
 `;
 
 const Emoji = styled.span`
-  ${tw`mx-1`}
+  ${tw`py-1 pl-1`}
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
 `;
 
 const ProjectName = styled.span`
-  ${tw`mx-1`}
+  ${tw`py-1`}
 `;
 
 const ProjectDescription = styled.span`
-  ${tw`mx-1`}
+  ${tw`py-1`}
   font-size: 1.7rem;
+  color: ${colors.grey};
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
 `;
 
 const query = graphql`
@@ -60,24 +73,26 @@ const Projects = (): JSX.Element => {
   return (
     <Section>
       <H1>Quelques projets</H1>
-      {repositories.map(
-        ({ id, name, description, htmlUrl, emoji }: IRepository) => (
-          <Row
-            key={`${id}${name}`}
-            href={htmlUrl}
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-          >
-            <Emoji>{emoji}</Emoji>
+      <Grid>
+        {repositories.map(
+          ({ id, name, description, htmlUrl, emoji }: IRepository) => (
+            <Row
+              key={`${id}${name}`}
+              href={htmlUrl}
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+            >
+              <Emoji>{emoji}</Emoji>
 
-            <ProjectName>
-              <strong>{name} </strong>
-            </ProjectName>
+              <ProjectName>
+                <strong>{name} </strong>
+              </ProjectName>
 
-            <ProjectDescription>{description}</ProjectDescription>
-          </Row>
-        ),
-      )}
+              <ProjectDescription>{description}</ProjectDescription>
+            </Row>
+          ),
+        )}
+      </Grid>
     </Section>
   );
 };

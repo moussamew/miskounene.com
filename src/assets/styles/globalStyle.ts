@@ -32,6 +32,10 @@ const GlobalStyle = createGlobalStyle`
   strong {
     color: ${colors.blueDark};
   }
+
+  img {
+    border-radius: 1.5rem;
+  }
   
   button {
     outline: none;
