@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import styled from 'styled-components';
 import tw from 'tailwind.macro';
 
@@ -11,7 +11,7 @@ const WidthContent = styled.div`
   max-width: 1180px;
 `;
 
-const Wrapper = ({ children }: IProps): JSX.Element => (
+const Wrapper: FunctionComponent = ({ children }) => (
   <WidthContent>{children}</WidthContent>
 );
 

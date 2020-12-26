@@ -3,19 +3,19 @@ import Img from 'gatsby-image';
 import { useStaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 import tw from 'tailwind.macro';
-import { H1 } from '../../atomic/Heading';
+import Title from '../../atomic/Heading';
 import Text from '../../atomic/Text';
 
 const Section = styled.section`
-  ${tw`mt-10 flex`}
+  ${tw`mt-10 flex`};
 `;
 
 const Presentation = styled.div`
-  ${tw`w-1/2`}
+  ${tw`w-1/2`};
 `;
 
 const ImageWrapper = styled.div`
-  ${tw`flex justify-center w-1/2`}
+  ${tw`flex justify-center w-1/2`};
   display: flex;
 
   .gatsby-image-wrapper {
@@ -41,7 +41,7 @@ const Welcome: FunctionComponent = () => {
   return (
     <Section>
       <Presentation>
-        <H1 noMargin>Hey you! Welcome! 👋 </H1>
+        <Title>Hey you! Welcome! 👋 </Title>
         <Text>
           Salut moi c&apos;est Moussa, développeur d’applications web et mobile.
           Je travaille principalement sur <strong>React</strong> et{' '}

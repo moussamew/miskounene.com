@@ -46,28 +46,15 @@ module.exports = {
     'react/jsx-filename-extension': [2, { extensions: ['.tsx'] }], // Only use jsx inside .tsx files
     'import/prefer-default-export': 'off', // Don't warn for single export from a module
     'react/prop-types': 'off',
-    // Use import/extensions workaround to import files with .ts/.tsx extensions
+    'jsx-a11y/accessible-emoji': 'off',
+    /* Use import/extensions workaround to import files with .ts/.tsx extensions
+    Issue here: https://github.com/benmosher/eslint-plugin-import/issues/1615 */
     'import/extensions': [
       'error',
       'ignorePackages',
       {
         ts: 'never',
         tsx: 'never',
-      },
-    ],
-    // Disable spreading props to another component except inside GatsbyLink component
-    'react/jsx-props-no-spreading': [
-      'error',
-      {
-        exceptions: ['GatsbyLink'],
-      },
-    ],
-    // Make href attribute not concerned in Link component provided by Gatsby
-    'jsx-a11y/anchor-is-valid': [
-      'error',
-      {
-        components: ['GatsbyLink'],
-        specialLink: ['to'],
       },
     ],
   },

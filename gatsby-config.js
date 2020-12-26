@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    description: `Je suis Moussa Iskounene, développeur d'applications web & mobile sur les technologies React et React Native.`,
-    author: 'Moussa',
+    description: `I am a software engineer based in Paris, specialized in the creation of web and mobile applications.`,
+    author: 'Moussa Iskounene',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

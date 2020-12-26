@@ -1,8 +1,8 @@
-import React, { ReactNode } from 'react';
+import React, { FunctionComponent, ReactNode } from 'react';
 import styled from 'styled-components';
 import tw from 'tailwind.macro';
 
-interface IProps {
+interface Props {
   children: ReactNode;
 }
 
@@ -10,7 +10,7 @@ const StyledText = styled.p`
   ${tw`font-openSans mt-2`}
 `;
 
-const Text = ({ children }: IProps): JSX.Element => (
+const Text: FunctionComponent<Props> = ({ children }) => (
   <StyledText>{children}</StyledText>
 );
 

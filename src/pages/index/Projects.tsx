@@ -2,7 +2,6 @@ import React, { FunctionComponent } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 import tw from 'tailwind.macro';
-import { H1 } from '../../atomic/Heading';
 import { Repository } from '../../types/node';
 
 const { colors } = require('../../../tailwind');
@@ -72,7 +71,7 @@ const Projects: FunctionComponent = () => {
 
   return (
     <Section>
-      <H1>Quelques projets</H1>
+      <h2>Quelques projets</h2>
       <Grid>
         {repositories.map(
           ({ id, name, description, htmlUrl, emoji }: Repository) => (
