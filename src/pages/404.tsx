@@ -1,6 +1,6 @@
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent } from 'react'
 
-import { Layout, SEO } from '../components';
+import { Layout, SEO } from '../components'
 
 const NotFoundPage: FunctionComponent = () => (
   <Layout>
@@ -8,6 +8,6 @@ const NotFoundPage: FunctionComponent = () => (
     <h1>NOT FOUND</h1>
     <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
   </Layout>
-);
+)
 
-export default NotFoundPage;
+export default NotFoundPage

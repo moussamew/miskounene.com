@@ -1,8 +1,8 @@
-import React, { Fragment, FunctionComponent } from 'react';
-import GlobalStyle from '../assets/styles/globalStyle';
+import React, { Fragment, FunctionComponent } from 'react'
+import GlobalStyle from '../assets/styles/globalStyle'
 
 interface Props {
-  children: JSX.Element[];
+  children: JSX.Element[]
 }
 
 const Layout: FunctionComponent<Props> = ({ children }) => (
@@ -10,6 +10,6 @@ const Layout: FunctionComponent<Props> = ({ children }) => (
     <main>{children}</main>
     <GlobalStyle />
   </Fragment>
-);
+)
 
-export { Layout };
+export { Layout }

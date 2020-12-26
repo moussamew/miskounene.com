@@ -1,7 +1,7 @@
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent } from 'react'
 
-import Home from './home';
+import Home from './home'
 
-const Index: FunctionComponent = () => <Home />;
+const Index: FunctionComponent = () => <Home />
 
-export default Index;
+export default Index

@@ -1,11 +1,11 @@
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent } from 'react'
 
-import { Layout, SEO, Wrapper } from '../../components';
+import { Layout, SEO, Wrapper } from '../../components'
 
-import Welcome from './Welcome';
-import Projects from './Projects';
+import Welcome from './Welcome'
+import Projects from './Projects'
 
-const title = 'Moussa Iskounene | Software Engineer 👋';
+const title = 'Moussa Iskounene | Software Engineer 👋'
 
 const Home: FunctionComponent = () => (
   <Layout>
@@ -15,6 +15,6 @@ const Home: FunctionComponent = () => (
       <Projects />
     </Wrapper>
   </Layout>
-);
+)
 
-export default Home;
+export default Home

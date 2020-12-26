@@ -5,7 +5,7 @@ import tw, { styled } from 'twin.macro';
 import { Title, Text } from '../../components';
 
 const Section = styled.section`
-  ${tw`mt-10 flex`};
+  ${tw`mt-8 flex`};
 `;
 
 const Presentation = styled.div`

@@ -1,8 +1,8 @@
-import React, { FunctionComponent } from 'react';
-import tw, { styled } from 'twin.macro';
+import React, { FunctionComponent } from 'react'
+import tw, { styled } from 'twin.macro'
 
 const StyledButton = styled.button`
-  ${tw`m-auto shadow-md px-2 bg-blue text-white`};
+  ${tw`m-auto shadow-md px-2 bg-blue text-white`}
 
   transition: all 0.5s cubic-bezier(0.31, -0.105, 0.43, 1.4), height 0.25s ease;
   padding-top: 1.5rem;
@@ -12,29 +12,29 @@ const StyledButton = styled.button`
   &:hover {
     ${tw`bg-blueDark`}
   }
-`;
+`
 
 const Flex = styled.div`
-  ${tw`flex flex-row`};
-`;
+  ${tw`flex flex-row`}
+`
 
 const Span = styled.span`
-  ${tw`text-center w-full`};
+  ${tw`text-center w-full`}
 
   line-height: inherit;
   transition: all 0.25s cubic-bezier(0.31, -0.105, 0.43, 1.4);
-`;
+`
 
 const Image = styled.img`
   ${tw`ml-1`}
 
   height: 22px;
-`;
+`
 
 interface Props {
-  action: () => void;
-  text: string;
-  icon?: string;
+  action: () => void
+  text: string
+  icon?: string
 }
 
 const Button: FunctionComponent<Props> = ({ action, text, icon }) => (
@@ -44,6 +44,6 @@ const Button: FunctionComponent<Props> = ({ action, text, icon }) => (
       {icon && <Image src={icon} />}
     </Flex>
   </StyledButton>
-);
+)
 
-export { Button };
+export { Button }

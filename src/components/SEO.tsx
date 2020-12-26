@@ -1,14 +1,14 @@
-import React, { FunctionComponent } from 'react';
-import { Helmet } from 'react-helmet';
-import { useStaticQuery, graphql } from 'gatsby';
+import React, { FunctionComponent } from 'react'
+import { Helmet } from 'react-helmet'
+import { useStaticQuery, graphql } from 'gatsby'
 
-import { Meta } from '../types/data';
+import { Meta } from '../types/data'
 
 interface Props {
-  title: string;
-  meta?: Meta[];
-  lang?: string;
-  description?: string;
+  title: string
+  meta?: Meta[]
+  lang?: string
+  description?: string
 }
 
 const query = graphql`
@@ -20,7 +20,7 @@ const query = graphql`
       }
     }
   }
-`;
+`
 
 const SEO: FunctionComponent<Props> = ({
   title,
@@ -28,9 +28,9 @@ const SEO: FunctionComponent<Props> = ({
   meta = [],
   description,
 }) => {
-  const { site } = useStaticQuery(query);
+  const { site } = useStaticQuery(query)
 
-  const metaDescription = description || site.siteMetadata.description;
+  const metaDescription = description || site.siteMetadata.description
 
   const customMeta = [
     {
@@ -65,7 +65,7 @@ const SEO: FunctionComponent<Props> = ({
       name: `twitter:description`,
       content: metaDescription,
     },
-  ];
+  ]
 
   return (
     <Helmet
@@ -75,7 +75,7 @@ const SEO: FunctionComponent<Props> = ({
       title={title}
       meta={customMeta.concat(meta)}
     />
-  );
-};
+  )
+}
 
-export { SEO };
+export { SEO }
