@@ -1,10 +1,8 @@
 import React, { FunctionComponent } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import styled from 'styled-components';
-import tw from 'tailwind.macro';
+import tw, { styled } from 'twin.macro';
 import { Repository } from '../../types/node';
-
-const { colors } = require('../../../tailwind');
+import { Subtitle } from '../../components';
 
 const Section = styled.section`
   ${tw`flex flex-col`};
@@ -16,28 +14,30 @@ const Grid = styled.div`
 `;
 
 const Row = styled.a`
-  ${tw`py-1 cursor-pointer`}
+  ${tw`py-1 cursor-pointer`};
+
   display: contents;
 
   &:hover span {
-    background: ${colors.greyLight};
+    ${tw`bg-greyLight`};
   }
 `;
 
 const Emoji = styled.span`
-  ${tw`py-1 pl-1`}
+  ${tw`py-1 pl-1`};
+
   border-top-left-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
 `;
 
 const ProjectName = styled.span`
-  ${tw`py-1`}
+  ${tw`py-1`};
 `;
 
 const ProjectDescription = styled.span`
-  ${tw`py-1`}
+  ${tw`py-1 text-grey`};
+
   font-size: 1.7rem;
-  color: ${colors.grey};
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
 `;
@@ -71,7 +71,7 @@ const Projects: FunctionComponent = () => {
 
   return (
     <Section>
-      <h2>Quelques projets</h2>
+      <Subtitle>Quelques projets</Subtitle>
       <Grid>
         {repositories.map(
           ({ id, name, description, htmlUrl, emoji }: Repository) => (

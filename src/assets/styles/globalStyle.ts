@@ -1,6 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-
-const { colors } = require('../../../tailwind');
+import tw from 'twin.macro';
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -25,12 +24,11 @@ const GlobalStyle = createGlobalStyle`
   }
 
   a {
-    color: ${colors.black};
     text-decoration: unset;
   }
 
   strong {
-    color: ${colors.blueDark};
+    ${tw`text-blueDark`};
   }
 
   img {

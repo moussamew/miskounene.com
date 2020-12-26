@@ -1,8 +1,7 @@
 import React, { FunctionComponent } from 'react';
 import Img from 'gatsby-image';
 import { useStaticQuery, graphql } from 'gatsby';
-import styled from 'styled-components';
-import tw from 'tailwind.macro';
+import tw, { styled } from 'twin.macro';
 import { Title, Text } from '../../components';
 
 const Section = styled.section`
@@ -15,7 +14,6 @@ const Presentation = styled.div`
 
 const ImageWrapper = styled.div`
   ${tw`flex justify-center w-1/2`};
-  display: flex;
 
   .gatsby-image-wrapper {
     width: 275px;

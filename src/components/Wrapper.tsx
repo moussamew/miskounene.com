@@ -1,8 +1,7 @@
 import React, { FunctionComponent } from 'react';
-import styled from 'styled-components';
-import tw from 'tailwind.macro';
+import tw, { styled } from 'twin.macro';
 
-interface IProps {
+interface Props {
   children: JSX.Element | JSX.Element[];
 }
 
@@ -11,7 +10,7 @@ const WidthContent = styled.div`
   max-width: 1180px;
 `;
 
-const Wrapper: FunctionComponent = ({ children }) => (
+const Wrapper: FunctionComponent<Props> = ({ children }) => (
   <WidthContent>{children}</WidthContent>
 );
 

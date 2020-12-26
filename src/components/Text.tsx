@@ -1,13 +1,12 @@
 import React, { FunctionComponent, ReactNode } from 'react';
-import styled from 'styled-components';
-import tw from 'tailwind.macro';
+import tw, { styled } from 'twin.macro';
 
 interface Props {
   children: ReactNode;
 }
 
 const StyledText = styled.p`
-  ${tw`font-openSans mt-2`}
+  ${tw`mt-2`}
 `;
 
 const Text: FunctionComponent<Props> = ({ children }) => (
