@@ -1,20 +1,7 @@
 import React, { FunctionComponent } from 'react';
 
-import { Layout, SEO, Wrapper } from '../components';
+import Home from './home';
 
-import Welcome from './index/Welcome';
-import Projects from './index/Projects';
+const Index: FunctionComponent = () => <Home />;
 
-const title = 'Moussa Iskounene | Software Engineer 👋';
-
-const IndexPage: FunctionComponent = () => (
-  <Layout>
-    <SEO title={title} />
-    <Wrapper>
-      <Welcome />
-      <Projects />
-    </Wrapper>
-  </Layout>
-);
-
-export default IndexPage;
+export default Index;
