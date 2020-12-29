@@ -6,20 +6,19 @@ import { useTranslation } from 'react-i18next'
 import { Title, Text } from '../../components'
 
 const Section = styled.section`
-  ${tw`lg:mt-8 mt-5 
-  flex lg:flex-row flex-col-reverse`};
+  ${tw`flex lg:flex-row flex-col-reverse`}
 `
 
-const Presentation = styled.div`
-  ${tw`lg:w-1/2 w-full`};
+const Introduction = styled.div`
+  ${tw`lg:w-1/2 w-full`}
 `
 
 const ImageWrapper = styled.div`
-  ${tw`lg:flex lg:w-1/2 justify-center`};
+  ${tw`lg:flex lg:w-1/2 justify-center mt-2`}
 
   @media (min-width: 640px) {
     .gatsby-image-wrapper { {
-      width: 300px;
+      width: 350px;
     }
   }
 `
@@ -42,20 +41,11 @@ const Welcome: FunctionComponent = () => {
 
   return (
     <Section>
-      <Presentation>
+      <Introduction>
         <Title>{t('home.welcome.title')}</Title>
-        <Text>
-          Salut moi c&apos;est Moussa, développeur d’applications web et mobile.
-          Je travaille principalement sur <strong>React</strong> et{' '}
-          <strong>React Native</strong>.
-        </Text>
-        <Text>
-          Vous trouverez sur ce portfolio l&apos;ensemble de mes projets,
-          quelques articles autour de l&apos;écosystème{' '}
-          <strong>JavaScript</strong> ainsi que des bonnes pratiques de
-          développement.
-        </Text>
-      </Presentation>
+        <Text>{t('home.welcome.description1')}</Text>
+        <Text>{t('home.welcome.description2')}</Text>
+      </Introduction>
       <ImageWrapper>
         <Img fluid={placeholderImage.childImageSharp.fluid} />
       </ImageWrapper>

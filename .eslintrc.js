@@ -48,6 +48,7 @@ module.exports = {
     'react/prop-types': 'off',
     'jsx-a11y/accessible-emoji': 'off',
     'react/react-in-jsx-scope': 'off',
+    'no-shadow': 'off',
     /* Use import/extensions workaround to import files with .ts/.tsx extensions
     Issue here: https://github.com/benmosher/eslint-plugin-import/issues/1615 */
     'import/extensions': [

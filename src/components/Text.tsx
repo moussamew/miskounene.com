@@ -6,7 +6,7 @@ interface Props {
 }
 
 const StyledText = styled.p`
-  ${tw`mt-2`}
+  ${tw`mt-2 text-justify whitespace-pre-line`}
 `
 
 const Text: FunctionComponent<Props> = ({ children }) => (

@@ -18,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   p, label, a, span {
-    line-height: 1.5em;
+    line-height: 1.6em;
     margin: unset;
     font-family: "Open Sans";
     font-weight: normal;
