@@ -1,15 +1,29 @@
-import { Fragment, FunctionComponent } from 'react'
+import { FunctionComponent } from 'react'
+import { I18nextProvider } from 'react-i18next'
 import GlobalStyle from '../assets/styles/globalStyle'
+import { SEO, Wrapper } from '.'
+import i18next from '../../i18n'
 
 interface Props {
   children: JSX.Element[]
+  title?: string
+  description?: string
+  image?: string
 }
 
-const Layout: FunctionComponent<Props> = ({ children }) => (
-  <Fragment>
-    <main>{children}</main>
+const Layout: FunctionComponent<Props> = ({
+  children,
+  title,
+  description,
+  image,
+}) => (
+  <I18nextProvider i18n={i18next}>
+    <SEO title={title} description={description} image={image} />
+    <Wrapper>
+      <main>{children}</main>
+    </Wrapper>
     <GlobalStyle />
-  </Fragment>
+  </I18nextProvider>
 )
 
 export { Layout }

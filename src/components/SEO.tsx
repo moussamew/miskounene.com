@@ -23,7 +23,7 @@ const SEO: FunctionComponent<Props> = ({ title, description, image }) => {
   }
 
   return (
-    <Helmet title={title}>
+    <Helmet title={seo.title}>
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
       <meta property="og:title" content={seo.title} />

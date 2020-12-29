@@ -2,6 +2,7 @@ import { FunctionComponent } from 'react'
 import Img from 'gatsby-image'
 import { useStaticQuery, graphql } from 'gatsby'
 import tw, { styled } from 'twin.macro'
+import { useTranslation } from 'react-i18next'
 import { Title, Text } from '../../components'
 
 const Section = styled.section`
@@ -37,11 +38,12 @@ const query = graphql`
 
 const Welcome: FunctionComponent = () => {
   const { placeholderImage } = useStaticQuery(query)
+  const { t } = useTranslation()
 
   return (
     <Section>
       <Presentation>
-        <Title>Hey! Welcome! 👋 </Title>
+        <Title>{t('home.welcome.title')}</Title>
         <Text>
           Salut moi c&apos;est Moussa, développeur d’applications web et mobile.
           Je travaille principalement sur <strong>React</strong> et{' '}

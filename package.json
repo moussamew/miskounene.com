@@ -15,11 +15,13 @@
     "gatsby-plugin-typescript": "2.9.0",
     "gatsby-source-filesystem": "2.8.1",
     "gatsby-transformer-sharp": "2.9.0",
+    "i18next": "19.8.4",
     "node-fetch": "2.6.1",
     "prop-types": "15.7.2",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-helmet": "6.1.0",
+    "react-i18next": "11.8.5",
     "styled-components": "5.2.1",
     "tailwindcss": "2.0.2",
     "twin.macro": "2.0.7"
