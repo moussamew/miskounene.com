@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet'
 import { useSiteMetadata } from '../hooks'
 
 interface Props {
-  title: string
+  title?: string
   description?: string
   image?: string
 }

@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    site: 'Moussa Iskounene | Software Engineer 👋',
+    title: 'Moussa Iskounene | Software Engineer 👋',
     description: `I'm a Software Engineer living in Paris who designs web and mobile applications.`,
     url: 'https://miskounene.com',
     image: '/miskounene.png',
