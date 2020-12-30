@@ -4,11 +4,7 @@ import { FunctionComponent } from 'react'
 import { useTranslation } from 'react-i18next'
 import tw, { styled } from 'twin.macro'
 
-import {
-  Title,
-  TextWithTags,
-  TextWithDangerouselyInnerHtml,
-} from '../../components'
+import { Title, TextWithTags } from '../../components'
 
 const Section = styled.section`
   ${tw`flex lg:flex-row flex-col-reverse`}
@@ -58,9 +54,6 @@ const Welcome: FunctionComponent = () => {
           around the <strong>JavaScript</strong> ecosystem and make most of my
           applications in <strong>TypeScript.</strong>
         </TextWithTags>
-        <TextWithDangerouselyInnerHtml>
-          {t('home.welcome.description1')}
-        </TextWithDangerouselyInnerHtml>
       </Introduction>
       <ImageWrapper>
         <Img fluid={placeholderImage.childImageSharp.fluid} />

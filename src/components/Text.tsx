@@ -2,7 +2,7 @@ import { FunctionComponent } from 'react'
 import { Trans } from 'react-i18next'
 import tw, { styled } from 'twin.macro'
 
-interface Props {
+interface TextProps {
   children: string
 }
 
@@ -15,7 +15,7 @@ const StyledText = styled.p`
   ${tw`mb-1 text-justify whitespace-pre-line`}
 `
 
-const Text: FunctionComponent<Props> = ({ children }) => (
+const Text: FunctionComponent<TextProps> = ({ children }) => (
   <StyledText>{children}</StyledText>
 )
 
@@ -28,8 +28,4 @@ const TextWithTags: FunctionComponent<TextWithTagsProps> = ({
   </StyledText>
 )
 
-const TextWithDangerouselyInnerHtml: FunctionComponent<Props> = ({
-  children,
-}) => <StyledText dangerouslySetInnerHTML={{ __html: children }} />
-
-export { Text, TextWithTags, TextWithDangerouselyInnerHtml }
+export { Text, TextWithTags }

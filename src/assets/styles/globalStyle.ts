@@ -41,6 +41,7 @@ const GlobalStyle = createGlobalStyle`
     cursor: pointer;
     border: none;
     font-size: 1.6rem;
+    padding: 0;
   }
 
   ::selection {
