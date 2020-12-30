@@ -23,8 +23,8 @@ i18n.use(LanguageDetector).init({
     wait: true,
   },
   detection: {
-    order: ['localStorage'],
-    caches: ['localStorage'],
+    order: ['localStorage', 'cookie'],
+    caches: ['localStorage', 'cookie'],
   },
 })
 
