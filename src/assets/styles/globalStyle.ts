@@ -32,10 +32,6 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: unset;
   }
 
-  strong {
-    ${tw`text-blueDark`};
-  }
-
   img {
     border-radius: 1.5rem;
   }
