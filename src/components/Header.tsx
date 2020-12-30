@@ -1,6 +1,14 @@
 import { FunctionComponent } from 'react'
 import { useTranslation } from 'react-i18next'
+import tw, { styled } from 'twin.macro'
 import { Language } from '../i18n'
+import { Text } from '.'
+import LanguageIcon from '../assets/images/language.svg'
+
+const SwitchLanguage = styled.button`
+  ${tw`bg-transparent flex items-center
+  hover:text-blueDark mt-2 `}
+`
 
 const Header: FunctionComponent = () => {
   const { i18n, t } = useTranslation()
@@ -13,9 +21,10 @@ const Header: FunctionComponent = () => {
 
   return (
     <header>
-      <button type="button" onClick={changeCurrentLanguage}>
-        {t('header.language')}
-      </button>
+      <SwitchLanguage type="button" onClick={changeCurrentLanguage}>
+        <LanguageIcon fill="currentColor" tw="mb-1 mr-0.5" />
+        <Text>{t('header.language')}</Text>
+      </SwitchLanguage>
     </header>
   )
 }

@@ -40,6 +40,7 @@ const GlobalStyle = createGlobalStyle`
     outline: none;
     cursor: pointer;
     border: none;
+    font-size: 1.6rem;
   }
 
   ::selection {
