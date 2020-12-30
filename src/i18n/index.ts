@@ -19,12 +19,11 @@ i18n.use(LanguageDetector).init({
     escapeValue: false,
   },
   react: {
-    useSuspense: false,
     wait: true,
   },
   detection: {
-    order: ['localStorage', 'cookie'],
-    caches: ['localStorage', 'cookie'],
+    order: ['localStorage'],
+    caches: ['localStorage'],
   },
 })
 
