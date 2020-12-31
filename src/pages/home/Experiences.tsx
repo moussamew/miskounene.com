@@ -38,7 +38,10 @@ const ImageWrapper = styled.div`
 
 const query = graphql`
   query {
-    images: allFile(filter: { relativeDirectory: { eq: "experiences" } }) {
+    images: allFile(
+      filter: { relativeDirectory: { eq: "experiences" } }
+      sort: { fields: birthTime }
+    ) {
       nodes {
         id
         name
